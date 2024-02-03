@@ -236,9 +236,9 @@ func RenderTag(dbPath string, tag string) { //this is even grosser.
 	//to plug generated snips into the tag template, use a simple string replace instead of go templates
 	renderedHome := strings.Replace(tagTemplate, "bodycontenthere", strings.Join(snips, "\n"), -1)
 	renderedHome = strings.Replace(renderedHome, "tagheaderhere", `<p class="innerHtml" id="tagheader">Posts with tag: <strong>`+tag+`</strong></p>`, -1)
-	// template links assume they're in output/ and not output/tags/. Correct that by string replacing relative links.
+	// template links assume they're in output/ and not output/tag/. Correct that by string replacing relative links.
 	renderedHome = strings.Replace(renderedHome, `"./`, `"../`, -1)
-	err = os.WriteFile("output/tags/"+tag+".html", []byte(renderedHome), 0666)
+	err = os.WriteFile("output/tag/"+tag+".html", []byte(renderedHome), 0666)
 	if err != nil {
 		panic(err)
 	}

@@ -1,4 +1,6 @@
 *.db
 md/*
 !md/test*
-
+output/images/*
+output/*.html
+output/tags/*

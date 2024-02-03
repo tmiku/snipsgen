@@ -13,19 +13,34 @@ header {
     width: 100%;
 }
 
-#nameplate {
-    float: right;
-    margin-left: auto;
-    padding: 3px;
-    font-size: 40px;
-    line-height: 36px;
-    font-family: 'Young Serif', serif;
-    color: #70131e;
-    z-index: 2;
-    width: 200px;
-    height: 100%;
-    text-align: right;
-}
+#banner {
+    overflow: hidden;
+    width:calc(100% - 200px);
+    display: inline-block;
+    text-align: center
+    
+    }
+    
+    #birds {
+        height:72px;
+        margin:auto;
+        z-index: 2;
+    }
+    
+    #nameplate {
+        float:right;
+        margin-right:0;
+        background-color: rgba(250,219,197,0.5);
+        padding: 3px;
+        font-size: 40px;
+        line-height: 36px;
+        font-family: 'Young Serif', serif;
+        color: #70131e;
+        z-index: 3;
+        width: 200px;
+        height: 100%;
+        text-align: right;
+    }
 
 .innerHtml {
     min-width: 480px;
@@ -138,7 +153,7 @@ footer {
 }
 #modalactivate:checked ~ .modal,
 #modalactivate:checked ~ .modal-background {
-	display: block;
+	display: flex;
     animation: fadeIn 1s forwards;
 }
 
@@ -160,13 +175,14 @@ footer {
     margin: auto;
     display: none;	
     min-width:350px;
-    width:45%;
-    min-height: 300px;
+	max-width: 600px;
+	min-height: 400px;
+    height:auto;
     background-color: #fadbc5;
     border: solid 1px #70131e;
     box-sizing: border-box;
-    overflow: scroll;
     z-index: 9991;
+	overflow-y: auto;
 }
 .modal-content > p {
     margin: 0;
