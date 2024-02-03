@@ -98,7 +98,7 @@ p:has(img) {
     text-align: center;
 }
 
-img:not(.icon) {
+img:not(.icon):not(#birds) {
     max-width: 500px;
     max-height: 600px;
     margin:auto;
