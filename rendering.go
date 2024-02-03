@@ -23,7 +23,7 @@ type SnipContent struct {
 func MakeTagsHtml(tagSlice []string) string {
 	htmlOut := ""
 	for _, tag := range tagSlice {
-		htmlOut = htmlOut + `<span class="tag"> <a href="/snips/tag/` + tag + `">` + tag + `</a></span>`
+		htmlOut = htmlOut + `<span class="tag"> <a href="/snips/tag/` + tag + `.html">` + tag + `</a></span>`
 	}
 	return htmlOut
 }
