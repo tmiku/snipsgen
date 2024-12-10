@@ -13,6 +13,11 @@ header {
     width: 100%;
 }
 
+html {
+    visibility: visible;
+    opacity: 1;
+}
+
 #banner {
     overflow: hidden;
     width:calc(100% - 200px);
